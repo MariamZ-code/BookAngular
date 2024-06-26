@@ -1,0 +1,15 @@
+
+.example-header input {
+  font-size: 14px;
+  width: 100%;
+}
+.main-color {
+  background-color: rgb(100, 149, 237);
+  color: white;
+}
+.headerTable{
+  margin-top: 10px !important;
+}
+.clickable-cell {
+  cursor: pointer;
+}

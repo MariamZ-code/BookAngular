@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="mt-5 mb-5 d-flex">
+    <a class="btn ms-auto main-color" (click)="createTask()">Add Book</a>
+  </div>
+</div>
+
+<div class="container example-container mat-elevation-z8 mb-5 p-5 ">
+
+  <h2 class="mb-3 mt-3 ms-3  text-center headerTable p-1">Book List</h2>
+  <mat-table #table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell class="clickable-cell" *matCellDef="let element; let index = index" (click)="openDetails(element)">
+        {{ index + 1 }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.Title }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.Description }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.Author }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="genre">
+      <mat-header-cell *matHeaderCellDef> Genre </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.Genre }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button class="btn btn-warning me-3" (click)="updateTask(element)">Update</button>
+        <button class="btn btn-danger" (click)="deleteTask(element.Id)">Delete</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+  <!-- <div class="d-flex justify-content-end mt-3">
+    <mat-paginator [pageSizeOptions]="[5,10,20]" [length]="total" (page)="changePage($event)"></mat-paginator>
+  </div> -->
+</div>

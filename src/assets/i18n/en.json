@@ -1,0 +1,9 @@
+{
+  "task": {
+
+  },
+  "general" : {
+    "loading":"Loading",
+    "login":"Login"
+  }
+}

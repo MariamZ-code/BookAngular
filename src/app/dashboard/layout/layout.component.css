@@ -1,0 +1,21 @@
+
+.navbar {
+  background-color: rgb(100, 149, 237);
+}
+
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link:focus{
+  color: rgb(169, 169, 3);
+}
+
+.navbar .nav-link:hover{
+  color: rgb(169, 169, 3);
+}
+
+.language:hover {
+  cursor: pointer;
+  color: rgb(169, 169, 3);
+}
+

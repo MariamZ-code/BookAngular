@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h2>Book Details</h2>
+  <div *ngIf="task">
+    <div class="mb-3">
+      <label for="taskTitle" class="form-label">Title</label>
+      <input type="text" class="form-control" id="taskTitle" [value]="task.title" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="taskDescription" class="form-label">Author</label>
+      <input type="text" class="form-control" id="taskDescription" [value]="task.author" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="taskDescription" class="form-label">Description</label>
+      <input type="text" class="form-control" id="taskDescription" [value]="task.description" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="taskDescription" class="form-label">Genre</label>
+      <input type="text" class="form-control" id="taskDescription" [value]="task.genre" readonly>
+    </div>
+    
+  </div>
+</div>
